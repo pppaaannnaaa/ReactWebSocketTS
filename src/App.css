@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 40px;
+  background-color: #707070;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0px 20px;
+}
+header .filter{
+  display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+}
+.cardBody {
+  display: flex;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+  min-width: 180px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 1px 1px 1px 2px rgb(0 0 0 / 16%);
+}
+.card .title {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+}
+.card .details {
+  border: 1px solid black;
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px;
+}
+.card .action {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.card .action .status {
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card .action .actionBtn {
+  display: flex;
+}
+input.switch {
+  position: relative;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 35px !important;
+  height: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #ccc;
+  transition: box-shadow 0.3s ease-in-out, padding 0.25s ease-in-out;
+  transition-delay: 0.1s, 0s;
+}
+input.switch:focus {
+  border: 0;
+  outline: 0;
+}
+input.switch:checked {
+  transition-delay: 0s, 0s;
+  box-shadow: inset 0 0 0 2.62857em #00c169 !important;
+  padding-left: 15px;
+}
+input.switch:before {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin: 3px;
+  background-color: #fff;
+  border-radius: 2.1em;
+  transition: all 0.1s ease 0.1s;
+}
+input.switch:before,
+input.switch:after {
+  content: "";
+  display: block;
+}
+input.switch:active::before {
+  transition: all 0.1s ease 0.05s;
 }
